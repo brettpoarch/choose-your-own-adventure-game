@@ -5,11 +5,12 @@ var count = 0
 document.getElementById("game").innerHTML = "What is your name?";
 
 var inputName = document.createElement("input");
+inputName.id="name";
 
 var inputButton = document.createElement("button");
 var nodeEnter = document.createTextNode("enter");
 
-var userName = inputButton.value;
+
 
 inputButton.appendChild(nodeEnter);
 
@@ -18,10 +19,10 @@ element.appendChild(inputButton);
 
 inputButton.onclick = function(){start()};
 
-console.log(userName);
-
 function start(){
-  document.getElementById("game").innerHTML = "Hello " + userName + " Do you want to play a game?";
+
+  var userName = document.getElementById("name").value;
+  document.getElementById("game").innerHTML = "Hello " + userName + " do you want to play a game?";
 
   var yes = document.createElement("button");
   var no = document.createElement("button");
