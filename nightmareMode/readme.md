@@ -1,0 +1,1 @@
+create adventure game without using prompt(), confirm(), alert()
